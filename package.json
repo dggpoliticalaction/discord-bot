@@ -18,12 +18,13 @@
     "start": "cross-env NODE_ENV=production node build/main.js",
     "dev": "cross-env NODE_ENV=development nodemon --exec ts-node --transpile-only src/main.ts",
     "i18n": "typesafe-i18n",
-    "migration:create": "npx mikro-orm migration:create",
-    "migration:up": "npx mikro-orm migration:up",
-    "migration:down": "npx mikro-orm migration:down",
+    "migration:create": "pnpx mikro-orm migration:create",
+    "migration:up": "pnpx mikro-orm migration:up",
+    "migration:down": "pnpx mikro-orm migration:down",
     "plugins:install": "installoop --rootDir=./src/plugins",
     "postinstall": "pnpm run plugins:install",
     "lint": "eslint .",
+    "lint:ci": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
