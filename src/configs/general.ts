@@ -2,11 +2,11 @@ import { env } from '@/env'
 
 export const generalConfig: GeneralConfigType = {
 
-	name: 'tscord', // the name of your bot
-	description: '', // the description of your bot
+	name: 'dggPolBot', // the name of your bot
+	description: 'WIP bot for DGG Political Action', // the description of your bot
 	defaultLocale: 'en', // default language of the bot, must be a valid locale
 	ownerId: env.BOT_OWNER_ID,
-	timezone: 'Europe/Paris', // default TimeZone to well format and localize dates (logs, stats, etc)
+	timezone: 'CST', // default TimeZone to well format and localize dates (logs, stats, etc)
 
 	simpleCommandsPrefix: '!', // default prefix for simple command messages (old way to do commands on discord)
 	automaticDeferring: true, // enable or not the automatic deferring of the replies of the bot on the command interactions
