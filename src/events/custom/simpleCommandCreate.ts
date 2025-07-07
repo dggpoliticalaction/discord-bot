@@ -46,8 +46,8 @@ export default class SimpleCommandCreateEvent {
 		[message]: ArgsOf<'messageCreate'>,
 		client: Client
 	) {
-		const prefix = await getPrefixFromMessage(message)
-		const command = await client.parseCommand(prefix, message, false)
+		// const prefix = await getPrefixFromMessage(message)
+		const command = await client.parseCommand(message, false)
 
 		if (command && command instanceof SimpleCommandMessage) {
 			/**
