@@ -25,10 +25,10 @@ export class Data extends CustomBaseEntity {
 	[EntityRepositoryType]?: DataRepository
 
 	@PrimaryKey()
-    key!: string
+	key!: string
 
 	@Property()
-    value: string = ''
+	value: string = ''
 
 }
 

@@ -4,7 +4,7 @@ import { Discord, Injectable, On, OnCustom } from '@/decorators'
 import { Guild, User } from '@/entities'
 import { Maintenance } from '@/guards'
 import { Database, EventManager, Logger, Stats } from '@/services'
-import { getPrefixFromMessage, syncUser } from '@/utils/functions'
+import { syncUser } from '@/utils/functions'
 
 @Discord()
 @Injectable()
@@ -46,8 +46,8 @@ export default class SimpleCommandCreateEvent {
 		[message]: ArgsOf<'messageCreate'>,
 		client: Client
 	) {
-		const prefix = await getPrefixFromMessage(message)
-		const command = await client.parseCommand(prefix, message, false)
+		// const prefix = await getPrefixFromMessage(message)
+		const command = await client.parseCommand(message, false)
 
 		if (command && command instanceof SimpleCommandMessage) {
 			/**

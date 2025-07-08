@@ -1,7 +1,7 @@
 import { Category } from '@discordx/utilities'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
-import { ActionRowBuilder, ButtonBuilder, ButtonStyle, CommandInteraction, EmbedBuilder, EmbedField } from 'discord.js'
+import { ActionRowBuilder, APIActionRowComponent, APIMessageActionRowComponent, ButtonBuilder, ButtonStyle, CommandInteraction, EmbedBuilder, EmbedField } from 'discord.js'
 import { Client } from 'discordx'
 
 import { generalConfig } from '@/configs'
@@ -133,7 +133,7 @@ export default class InfoCommand {
 		// finally send the embed
 		interaction.followUp({
 			embeds: [embed],
-			components: [row],
+			components: [row as unknown as APIActionRowComponent<APIMessageActionRowComponent>],
 		})
 	}
 
