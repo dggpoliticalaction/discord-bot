@@ -94,6 +94,7 @@ module.exports = antfu(
 			'ts/ban-ts-comment': 'off',
 			'ts/consistent-type-imports': 'off',
 			'ts/consistent-type-definitions': ['error', 'type'],
+			'ts/no-unsafe-function-type': 'warn',
 
 			'eslint-comments/no-unlimited-disable': 'off',
 			'eslint-comments/no-unused-disable': 'off',

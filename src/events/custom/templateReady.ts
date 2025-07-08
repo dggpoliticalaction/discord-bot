@@ -9,7 +9,6 @@ export default class TemplateReadyEvent {
 
 	@OnCustom('templateReady')
 	async templateReadyHandler() {
-
 		console.log('the template is fully ready!')
 	}
 

@@ -4,7 +4,7 @@ import { Discord, Injectable, On, OnCustom } from '@/decorators'
 import { Guild, User } from '@/entities'
 import { Maintenance } from '@/guards'
 import { Database, EventManager, Logger, Stats } from '@/services'
-import { getPrefixFromMessage, syncUser } from '@/utils/functions'
+import { syncUser } from '@/utils/functions'
 
 @Discord()
 @Injectable()
